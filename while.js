@@ -11,10 +11,22 @@ loop ++
 console.log(loop)
 console.log('loop complete')
 
-let num = 10
+let num = 1
 
-while(num<=40){
-    if(num%2 ===0){
-        console.log(num)
+while(num<=100){
+    if(num === 50){
+        console.log('almost')
+        num++
+        continue;
     }
+    if(num === 100){
+        console.log('bobmo')
+        num ++
+        continue;
+    }
+    if(num%10 ===0){
+        console.log(`checkpoint ${num}`)
+    }
+    num++
 }
+console.log('tayari')

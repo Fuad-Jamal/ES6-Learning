@@ -9,3 +9,11 @@ if(i==60){
     break;
 }
 }
+
+for(let log= false, i=1; !log; i++){
+    console.log('invalid log')
+    if(i === 3){
+        log = true
+    }
+}
+console.log('complete log')

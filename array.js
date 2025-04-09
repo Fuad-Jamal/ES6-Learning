@@ -30,3 +30,9 @@ let me = bools.map((xoxo)=> {
     }
 })
 console.log(me)
+
+let coun = ['mombasa', 'na irobi', 'kisumu', 'na kuru', 'eldoret', 'meru', 'nye ri', 'kaji ado']
+let aaa = coun.filter((x) =>{
+   if( x.includes(' '))return true
+})
+console.log(aaa)

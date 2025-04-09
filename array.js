@@ -59,3 +59,22 @@ let it = range.reduce((acc, curr) => {
     return acc
 },[])
 console.log(it)
+
+let companies = ['Apple', 'Amazon', 'Adobe', 'Microsoft', 'Google', 'Facebook'];
+let comp = companies.reduce((acc,cur,i) => {
+    if(cur.startsWith('A')){
+return acc
+    }
+    if(i === companies.length -1){
+        return acc + cur
+    }
+    return acc + cur + ','
+},'')
+console.log(comp)
+
+let items = ['banana', 'apple', 'orange', 'grape', 'mango', 'pineapple', 'peach', 'kiwi'].map((x) => {
+    return x.toUpperCase()
+}).reduce((acc, curr) => {
+return acc + curr + ' '
+}, '')
+console.log(items)

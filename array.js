@@ -41,4 +41,21 @@ const price = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
 let dis = price.filter((x) => {
     if(x + 1.15 > 600) return true
 })
-console.log(dis)
+const nestedArrays = [
+    [1, 2, 3],
+    [4.5, 2.2, 6],
+    [7, 8, 9],
+    [10, 11.1, 2],
+    [13, 14.5, 15]
+];
+let two = nestedArrays.filter((x) => {
+    if(x.includes(2)) return true
+})
+console.log(two)
+
+let range = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+let it = range.reduce((acc, curr) => {
+    acc.push(curr)
+    return acc
+},[])
+console.log(it)

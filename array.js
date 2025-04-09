@@ -33,6 +33,12 @@ console.log(me)
 
 let coun = ['mombasa', 'na irobi', 'kisumu', 'na kuru', 'eldoret', 'meru', 'nye ri', 'kaji ado']
 let aaa = coun.filter((x) =>{
-   if( x.includes(' '))return true
+   if( !x.includes(' '))return true
 })
 console.log(aaa)
+
+const price = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+let dis = price.filter((x) => {
+    if(x + 1.15 > 600) return true
+})
+console.log(dis)

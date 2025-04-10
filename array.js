@@ -78,3 +78,14 @@ let items = ['banana', 'apple', 'orange', 'grape', 'mango', 'pineapple', 'peach'
 return acc + curr + ' '
 }, '')
 console.log(items)
+
+let sequence = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((x) => {
+    return x**2
+}).filter((y) =>{
+    if(y>100){
+        return true
+    }
+}).reduce((acc, curr) => {
+    return acc + curr
+},0)
+console.log(sequence)

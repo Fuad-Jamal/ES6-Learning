@@ -1,0 +1,7 @@
+let set = new Set()
+set.add(38)
+set.add('lkd sdj')
+set.add(true)
+set.add('osidih')
+set.delete('osidih')
+console.log(set)

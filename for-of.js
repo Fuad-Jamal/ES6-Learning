@@ -66,3 +66,19 @@ for(const name of namesSet) {
 }
 console.log(tont)
 console.log(namesSet)
+
+const backpack = new Map();
+
+backpack.set(1, { item: 'Laptop', brand: 'Dell', weight: '2kg', value: 1000 });
+backpack.set(2, { item: 'Notebook', pages: 200, color: 'blue', value: 5 });
+backpack.set(3, { item: 'Water Bottle', capacity: '1L', material: 'stainless steel', value: 15 });
+backpack.set(4, { item: 'Pen', color: 'black', type: 'gel', value: 2 });
+backpack.set(5, { item: 'Headphones', brand: 'Sony', type: 'wireless', value: 150 });
+
+let total = 0;
+for (const dfd of backpack) {
+    let sta = dfd[1]
+    console.log(`${sta.item} and it is with $${sta.value}`)
+    total += sta.value
+}
+console.log(`Then we have $${total}`)

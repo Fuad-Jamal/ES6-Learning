@@ -45,3 +45,22 @@ let me = newMap.get('numbers').reduce((acc, curr) => {
 return Math.max(...newMap.get('numbers'))
 })
 console.log(me)
+
+
+let iii = new Map()
+iii.set(    'log', (mmm) =>{
+        console.log(mmm)
+    }
+)
+iii.get('log')("hello")
+
+const nums = [1, 2, 3, 4, 5, 3, 2, 6, 7, 8, 1];
+let titi = new Map()
+for(let i=0; i<nums.length; i++){
+    if(titi.has(nums[i])){
+console.log(i, titi.get(nums[i]))
+    }else{
+        titi.set(nums[i], i)
+    }
+}
+console.log(titi)

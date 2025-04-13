@@ -11,4 +11,14 @@ for(const card of cards){
 }
 return deck
 }
-console.log(generateDeck())
+const myDeck = generateDeck()
+
+const drawCard = (deck) => {
+    let randomNum = Math.floor(Math.random() * deck.length)
+    const card= deck[randomNum]
+    deck.splice(randomNum, 1)
+    return card
+    
+}
+
+ let myCard = drawCard(myDeck)

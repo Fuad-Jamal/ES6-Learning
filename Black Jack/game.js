@@ -28,3 +28,6 @@ const dealerHand = []
  dealerHand.push(drawCard(myDeck))
  dealerHand.push(drawCard(myDeck))
 
+const checkScore = (hand) => {
+    let total = 0
+}

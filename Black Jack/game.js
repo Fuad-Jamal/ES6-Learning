@@ -20,5 +20,7 @@ const drawCard = (deck) => {
     return card
     
 }
+const playerHand = []
+const dealerHand = []
 
  let myCard = drawCard(myDeck)

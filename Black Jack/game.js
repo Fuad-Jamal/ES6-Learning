@@ -23,4 +23,8 @@ const drawCard = (deck) => {
 const playerHand = []
 const dealerHand = []
 
- let myCard = drawCard(myDeck)
+ playerHand.push(drawCard(myDeck))
+ playerHand.push(drawCard(myDeck))
+ dealerHand.push(drawCard(myDeck))
+ dealerHand.push(drawCard(myDeck))
+

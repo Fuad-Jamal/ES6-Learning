@@ -30,4 +30,8 @@ const dealerHand = []
 
 const checkScore = (hand) => {
     let total = 0
+    for(const cards of hand){
+        console.log(cards.Card)
+    }
 }
+checkScore(playerHand)

@@ -41,5 +41,26 @@ const checkScore = (hand) => {
 }
 console.log(total)
 }
-console.log(playerHand)
-checkScore(playerHand)
+
+while(true){
+    playerHand.push(drawCard(myDeck))
+    const playerScore = checkScore(playerHand)
+    
+    if(playerScore > 21){
+        console.log(`You lose!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
+        break;
+    }
+    if(playerScore === 21){
+        console.log(`You win!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
+        break;
+    }
+    let dealerScore = checkScore(dealerHand)
+    if(dealerScore > 21){
+        console.log(`You win!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
+        break;
+    }
+    if(dealerScore === 21){
+        console.log(`You lose!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
+        break;
+    }
+}

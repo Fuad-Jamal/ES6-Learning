@@ -11,7 +11,7 @@ for(const card of cards){
 }
 return deck
 }
-const myDeck = generateDeck()
+
 
 const drawCard = (deck) => {
     let randomNum = Math.floor(Math.random() * deck.length)
@@ -20,14 +20,6 @@ const drawCard = (deck) => {
     return card
     
 }
-const playerHand = []
-const dealerHand = []
-
- playerHand.push(drawCard(myDeck))
- playerHand.push(drawCard(myDeck))
- dealerHand.push(drawCard(myDeck))
- dealerHand.push(drawCard(myDeck))
-
 const checkScore = (hand) => {
     let total = 0
     for(const cards of hand){
@@ -39,12 +31,29 @@ const checkScore = (hand) => {
         total += Number(cards.Card)
     }
 }
-console.log(total)
+return total
 }
+
+const myDeck = generateDeck()
+const playerHand = []
+const dealerHand = []
+
+ playerHand.push(drawCard(myDeck))
+ playerHand.push(drawCard(myDeck))
+ dealerHand.push(drawCard(myDeck))
+ dealerHand.push(drawCard(myDeck))
+
+ console.log('Starting  of player hand', playerHand)
+console.log('Starting  of Player score', checkScore(playerHand))
+console.log('Starting  of dealer hand', dealerHand)
+console.log('Starting of dealer score', checkScore(dealerHand))
+
+
 
 while(true){
     playerHand.push(drawCard(myDeck))
     const playerScore = checkScore(playerHand)
+    let dealerScore = checkScore(dealerHand)
     
     if(playerScore > 21){
         console.log(`You lose!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
@@ -54,7 +63,8 @@ while(true){
         console.log(`You win!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
         break;
     }
-    let dealerScore = checkScore(dealerHand)
+  dealerHand.push(drawCard(myDeck))
+  dealerScore = checkScore(dealerHand)
     if(dealerScore > 21){
         console.log(`You win!! Your score was: ${playerScore} while the dealer had ${dealerScore}`) 
         break;
@@ -64,3 +74,9 @@ while(true){
         break;
     }
 }
+
+console.log('Ending of player hand', playerHand)
+console.log('Ending of Player score', checkScore(playerHand))
+console.log('Ending of dealer hand', dealerHand)
+console.log('Ending of dealer score', checkScore(dealerHand))
+

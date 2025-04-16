@@ -31,7 +31,15 @@ const dealerHand = []
 const checkScore = (hand) => {
     let total = 0
     for(const cards of hand){
-        console.log(cards.Card)
+        if(cards.Card === 'king' || cards.Card === 'Queen' || cards.Card === 'Jack'){
+            total += 10
+    }else if(cards.Card === 'Ace'){
+        total += 1
+    }else{
+        total += Number(cards.Card)
     }
 }
+console.log(total)
+}
+console.log(playerHand)
 checkScore(playerHand)

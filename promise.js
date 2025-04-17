@@ -19,22 +19,37 @@
 //     console.log(waka)
 //   });
 
-console.log("program start")
-let saka = new Promise((resolve, reject) => {
+// console.log("program start")
+// let saka = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+// resolve('promise resolved')
+//     },3000)
+// }).then((res)=>{
+//     console.log(res)
+//     return new Promise ((resolve, reject) => {
+//         setTimeout(()=>{
+//             resolve('second promise resolved')
+//         },3000)
+//     })
+// }).then((res)=>{
+//     console.log(res)
+// })
+// .catch((err)=>{
+//     console.log(err)
+// })
+// console.log(saka)
+
+
+const one = new Promise ((resolve, reject) => {
     setTimeout(()=>{
-resolve('promise resolved')
-    },3000)
-}).then((res)=>{
-    console.log(res)
-    return new Promise ((resolve, reject) => {
-        setTimeout(()=>{
-            resolve('second promise resolved')
-        },3000)
-    })
-}).then((res)=>{
+        resolve(10)
+    }, 3000)
+})
+const two = new Promise ((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(20)
+    }, 5000)
+})
+Promise.all([one, two]).then((res)=>{
     console.log(res)
 })
-.catch((err)=>{
-    console.log(err)
-})
-console.log(saka)

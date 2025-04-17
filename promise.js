@@ -24,12 +24,17 @@ let saka = new Promise((resolve, reject) => {
     setTimeout(()=>{
 resolve('promise resolved')
     },3000)
-    setTimeout(()=>{
-        reject('promise rejected')
-    }, 2000)
 }).then((res)=>{
     console.log(res)
-}).catch((err)=>{
+    return new Promise ((resolve, reject) => {
+        setTimeout(()=>{
+            resolve('second promise resolved')
+        },3000)
+    })
+}).then((res)=>{
+    console.log(res)
+})
+.catch((err)=>{
     console.log(err)
 })
 console.log(saka)

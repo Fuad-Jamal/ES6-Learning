@@ -22,10 +22,14 @@
 console.log("program start")
 let saka = new Promise((resolve, reject) => {
     setTimeout(()=>{
-console.log('program in progress')
 resolve('promise resolved')
     },3000)
+    setTimeout(()=>{
+        reject('promise rejected')
+    }, 2000)
 }).then((res)=>{
     console.log(res)
+}).catch((err)=>{
+    console.log(err)
 })
 console.log(saka)

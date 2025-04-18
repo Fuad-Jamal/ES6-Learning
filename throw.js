@@ -1,7 +1,8 @@
 try {
-    const mee = 'kkkd'
-    console.log(mee)
-  throw new Error ("is it skiis");
+   const meme = 'kasongo'
+   console.log(meme)
+   throw new Error('byarakwamy')
 } catch (e) {
   console.error(e);
+  console.error(meme)
 }

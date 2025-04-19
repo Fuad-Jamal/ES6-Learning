@@ -8,3 +8,13 @@ const time = new Promise((resolve) => {
 return time
 }
 console.log(timing(2000))
+timing(2000).then((message) => {
+    console.log(message)
+}
+)
+const fetch = async() => {
+    const rere = await timing(1000)
+    console.log('kabir',rere)
+}
+fetch()
+console.log('setu')

@@ -1,20 +1,20 @@
 
 const timing = (ms) =>{
-const time = new Promise((resolve) => {
+const time = new Promise((resolve,reject) => {
     setTimeout(() => {
-        resolve("Time is up!");
+        reject("Time is up!");
     }, ms);
 })
 return time
 }
-console.log(timing(2000))
-timing(2000).then((message) => {
-    console.log(message)
-}
-)
+
 const fetch = async() => {
+    try{
     const rere = await timing(1000)
     console.log('kabir',rere)
+    }catch(err){
+        console.log(err)
+    }
 }
 fetch()
 console.log('setu')

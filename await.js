@@ -1,24 +1,24 @@
 
-const fetchPokemon = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // resolve({data: {name: 'pikachu', type: 'electric'}});
-            reject(new Error('Failed to fetch Pokemon'));
-        }, 2000);
-    })
-}
-console.log('it\'s started')
+// const fetchPokemon = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             // resolve({data: {name: 'pikachu', type: 'electric'}});
+//             reject(new Error('Failed to fetch Pokemon'));
+//         }, 2000);
+//     })
+// }
+// console.log('it\'s started')
 
-const usePoke = async () => {
-    try{
-    const data = await fetchPokemon()
-    console.log(data)
-    }catch(err){
-        console.error(err)
-    }
-}
-usePoke()
-console.log('program done!')
+// const usePoke = async () => {
+//     try{
+//     const data = await fetchPokemon()
+//     console.log(data)
+//     }catch(err){
+//         console.error(err)
+//     }
+// }
+// usePoke()
+// console.log('program done!')
 
 const fetchUser = () => {
     return new Promise((resolve, reject) => {
@@ -37,8 +37,11 @@ if(user.admin === true){
 
 const useUser = async () => {
     try {
-        
+        const usez = await fetchUser()
+        login(usez)
     } catch (error) {
         console.error(error);
     }
 }
+useUser()
+console.log('end of program')

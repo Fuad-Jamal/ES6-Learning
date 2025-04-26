@@ -51,5 +51,7 @@ const two = new Promise ((resolve, reject) => {
     }, 5000)
 })
 Promise.all([one, two]).then((res)=>{
+    let answer = res[0] + res[1]
     console.log(res)
+    console.log(answer)
 })

@@ -1,11 +1,11 @@
-// function chil(){
-//     console.log('chili chili')
-//     for( let i =1; i<=10; i++){
-//         console.log(`chile at ${i}`)
-//     }
-//     console.log('all chili donex')
-// }
-// chil()
+function chil(){
+    console.log('chili chili')
+    for( let i =1; i<=10; i++){
+        console.log(`chile at ${i}`)
+    }
+    console.log('all chili donex')
+}
+chil()
 
 function log(use, pas){
 if(use === 'me') {return true}
@@ -18,3 +18,10 @@ console.log(log('mn',88))
 console.log(log('me', 844));
 console.log(log('monn',1212));
 console.log(log('tit', '444'))
+
+const ssq = (xx) =>{
+return xx**2
+}
+const plus = (x,y)=>{
+
+}

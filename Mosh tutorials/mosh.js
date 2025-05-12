@@ -7,4 +7,12 @@ return{
    }
 }
 }
-circle.draw();
+const circle = createCircle(1);
+
+//constructor function
+function Circle(radius){
+    this.radius = radius
+    this.draw = function(){
+        console.log('draw');
+    }
+}

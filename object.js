@@ -51,6 +51,17 @@ product.fruits[2].color = "Green"
 console.log(product.fruits[2])
 
 let x = product.price.reduce((acc, curr) => {
-
-},Math.max(...product.price))
+if(acc<curr){
+    return curr
+}
+return acc
+},0)
 console.log(x)
+
+const iii= {
+    log: (mmm) =>{
+        console.log(mmm)
+    }
+}
+iii.log("hello")
+console.log(console)

@@ -23,6 +23,9 @@ function Circle(radius){
     Object.defineProperty(this, 'defaultLocation', {
         get: function(){
             return defaultLocation
+        },
+        set: function(value){
+            defaultLocation = value
         }
     })
 }

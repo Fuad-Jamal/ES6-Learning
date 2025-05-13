@@ -56,10 +56,18 @@ class Product{
         console.log(`Product: ${this.name}`)
         console.log(`Price: $${this.price.toFixed(2)}`)
     }
+    calculateTotal(tax){
+        return this.price +(this.price * tax)
+    }
 }
+
+const tax = 0.05
 
 const product1 = new Product('Shirt', 19.99)
 const product2 = new Product('Pants', 9.76)
 const product3 = new Product('Shoes', 49.99)
 
 product3.displayProduct()
+
+const total = product1.calculateTotal(tax)
+console.log(`Total price: $${total.toFixed(2)}`)

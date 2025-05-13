@@ -42,7 +42,24 @@ for (let key in second){
 const keys = Object.keys(second)
 console.log(Circle.defaultLocation)
 
-let age = window.prompt('uFITE IMYAKE igera kuri ingahe')
-age = Number(age)
-age+=1
-console.log(age, typeof age);
+// let age = window.prompt('uFITE IMYAKE igera kuri ingahe')
+// age = Number(age)
+// age+=1
+// console.log(age, typeof age);
+
+class Product{
+    constructor(name, price){
+        this.name = name
+        this.price = price
+    }
+    displayProduct(){
+        console.log(`Product: ${this.name}`)
+        console.log(`Price: $${this.price.toFixed(2)}`)
+    }
+}
+
+const product1 = new Product('Shirt', 19.99)
+const product2 = new Product('Pants', 9.76)
+const product3 = new Product('Shoes', 49.99)
+
+product3.displayProduct()

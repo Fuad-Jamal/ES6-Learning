@@ -41,3 +41,8 @@ for (let key in second){
 }
 const keys = Object.keys(second)
 console.log(Circle.defaultLocation)
+
+let age = window.prompt('uFITE IMYAKE igera kuri ingahe')
+age = Number(age)
+age+=1
+console.log(age, typeof age);

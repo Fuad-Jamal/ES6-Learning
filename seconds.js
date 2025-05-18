@@ -25,4 +25,4 @@ for(const {name, second} of sections){
         n = n % second
     }
 }
-}
+} 

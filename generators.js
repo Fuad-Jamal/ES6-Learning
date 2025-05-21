@@ -21,7 +21,9 @@ function *generating () {
     yield 3
 }
 const generator = generating()
-console.log(generator)
-
-
+const generator2 = generating()
 console.log(generator.next())
+console.log(generator.next())
+console.log(generator2.next())
+console.log(generator2.next())
+

@@ -16,14 +16,15 @@
 
 
 function *generating () {
-    yield 1
-    yield 2
-    yield 3
+   let id = 1
+   while(true){
+    yield id
+    id++
+   }
 }
 const generator = generating()
-const generator2 = generating()
 console.log(generator.next())
 console.log(generator.next())
-console.log(generator2.next())
-console.log(generator2.next())
+console.log(generator.next())
+console.log(generator.next())
 

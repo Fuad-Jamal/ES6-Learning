@@ -1,28 +1,26 @@
-let timer = (n){
-    n = Number(n)
-    if(n == 0){
-        return "now"
+function formatDuration(seconds) {
+    if (seconds === 0) return "0 seconds";
+    const units = [
+        { name: "year", secs: 31536000 },
+        { name: "day", secs: 86400 },
+        { name: "hour", secs: 3600 },
+        { name: "minute", secs: 60 },
+        { name: "second", secs: 1 }
+    ];
+    let parts = [];
+    for (let i = 0; i < units.length; i++) {
+        let count = Math.floor(seconds / units[i].secs);
+        if (count > 0) {
+            seconds = seconds % units[i].secs;
+            let label = units[i].name;
+            if (count !== 1) label += "s";
+            parts.push(count + " " + label);
+        }
     }
-const year = 31536000
-const day = 86400
-const hour = 3600
-const minute = 60
-const seconds = 1
-
-const sections = [
-    {name: 'year', seconds: 'value'},
-    {name: 'day', seconds: value},
-    {name: 'hour', seconds: value},
-    {name: 'minute', seconds: value},
-    {name: 'second', seconds: value}
-]
-
-const result = []
-
-for(const {name, second} of sections){
-    let counter = n/second
-    if(counter > 0){
-        n = n % second
+    if (parts.length === 1) {
+        return parts[0];
+    } else {
+        return parts.slice(0, -1).join(", ") + " and " + parts[parts.length - 1];
     }
 }
-} 
+console.log(formatDuration(2424244)); // "0 seconds"

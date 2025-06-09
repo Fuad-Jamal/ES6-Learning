@@ -7,3 +7,4 @@ for(let str = 'baaa', i = 0, j=10; str != 'maaa'; i++, j++){
     }
     console.log(str)
 }
+

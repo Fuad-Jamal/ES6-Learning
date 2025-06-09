@@ -24,8 +24,8 @@ return prop in o? o[prop]: 'dudu'
         if(prop === 'difficulty'){
             return false
         }
-        retur prop in o
+        return prop in o
     }
 })
-gameSettingsProxy.difficulty = 'esy'
-console.log(gameSettingsProxy.difficulty)
+gameSettingsProxy.difficulty = 'easy'
+console.log('difficulty' in gameSettingsProxy)

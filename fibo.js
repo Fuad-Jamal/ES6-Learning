@@ -11,7 +11,7 @@ function* fibonacciGenerator(limit) {
         [x,y] = [y, x+y]
     }
 }
-fibonacciGenerator()
+
 for(const num of fibonacciGenerator(10)){
     console.log(num);
 }

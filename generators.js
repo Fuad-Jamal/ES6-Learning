@@ -17,12 +17,17 @@
 
 function *generating () {
    let id = 1
-   while(true){
+   while( id<=10){
     yield id
     id++
    }
 }
 const generator = generating()
+
+for(const val of generator){
+   
+}
+
 console.log(generator.next())
 console.log(generator.next())
 console.log(generator.next())

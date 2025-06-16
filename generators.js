@@ -15,21 +15,25 @@
 // xiq.next()
 
 
-function *generating () {
-   let id = 1
-   while( id<=10){
-    yield id
-    id++
-   }
+// function *generating () {
+//    let id = 1
+//    while( id<=10){
+//     yield id
+//     id++
+//    }
+// }
+// const generator = generating()
+
+// for(const val of generator){
+//    console.log(val)
+// }
+
+// console.log(generator.next())
+// console.log(generator.next())
+// console.log(generator.next())
+// console.log(generator.next())
+
+
+const random = function *(amount, min, max){
+for(let )
 }
-const generator = generating()
-
-for(const val of generator){
-   
-}
-
-console.log(generator.next())
-console.log(generator.next())
-console.log(generator.next())
-console.log(generator.next())
-

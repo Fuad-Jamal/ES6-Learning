@@ -35,5 +35,11 @@
 
 
 const random = function *(amount, min, max){
-for(let )
+for(let i=0; i<amount; i++){
+   yield Math.floor(Math.random() * (max-min +1) + min)
+}
+}
+const nums = random(10, 1, 100)
+for(const num of nums){
+   console.log(num)
 }

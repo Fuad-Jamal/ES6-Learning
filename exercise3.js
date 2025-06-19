@@ -12,5 +12,16 @@ class Product {
     }
 }
 class DigitalProduct extends Product {
-    
+    constructor(name, price, fileSize){
+        super(name, price)
+        this.fileSize = fileSize
+    }
+    dowload(){
+        return `This product ${this.name} is available for download.`
+    }
+}
+class DiscountManager {
+    constructor(product){
+        this.product = product
+    }
 }

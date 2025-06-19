@@ -4,6 +4,9 @@ class product {
         this.price = price
     }
     getDetails(){
-        
+        console.log(`The product we have is ${this.name} which costs about ${this.price}`)
+    }
+    getDiscount(disc){
+        git a
     }
 }

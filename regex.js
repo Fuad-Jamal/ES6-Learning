@@ -1,5 +1,5 @@
-const sentence = 'there is a guy who is a good guy';
-const pattern = /w[^abc]o/;
+const sentence = 'there is a guy w4o is a good guy';
+const pattern = /w[\d]o/;
 const test = pattern.test(sentence);
 console.log(test);
 const match = sentence.match(pattern)

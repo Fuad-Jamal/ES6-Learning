@@ -16,7 +16,7 @@ class DigitalProduct extends Product {
         super(name, price)
         this.fileSize = fileSize
     }
-    dowload(){
+    download(){
         return `This product ${this.name} is available for download.`
     }
 }
@@ -24,4 +24,10 @@ class DiscountManager {
     constructor(product){
         this.product = product
     }
+    static apply(product, discount){
+        return product.getDiscount(discount)
+    }
 }
+
+const book = DigitalProduct('JavaScript Basics', 20, '5MB')
+console.log(book.getDetails())

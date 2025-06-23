@@ -50,8 +50,12 @@ const two = new Promise ((resolve, reject) => {
         resolve(20)
     }, 5000)
 })
-Promise.all([one, two]).then((res)=>{
+const allPromise = Promise.all([one, two]).then((res)=>{
     let answer = res[0] + res[1]
     console.log(res)
     console.log(answer)
 })
+
+function isPromise(value){
+    if(value !== null && typeof value === 'object')
+}

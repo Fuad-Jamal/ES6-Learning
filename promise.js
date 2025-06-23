@@ -57,5 +57,8 @@ const allPromise = Promise.all([one, two]).then((res)=>{
 })
 
 function isPromise(value){
-    if(value !== null && typeof value === 'object')
+    if(value !== null && typeof value === 'object' || typeof value === 'function'){
+        return typeof value.then === 'function'? true: false
+    }
 }
+console.log(isPromise({}))

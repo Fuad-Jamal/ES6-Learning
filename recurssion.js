@@ -9,3 +9,22 @@ const sum = (array, index) => {
 }
 const result = sum(arr, 2)
 console.log(result)
+
+const mine = {
+    gold: 3,
+    left:{
+        gold: 2,
+        left:{
+            gold:4
+        },
+        right:{
+            gold: 1,
+        },
+    },
+    right: {
+        gold: 5,
+        right: {
+            gold:1
+        }
+    }
+}

@@ -7,8 +7,8 @@ const sum = (array, index) => {
     console.log(`current index: ${index}, current value: ${array[index]}`)
     return array[index] + sum(array, index + 1)
 }
-const result = sum(arr, 2)
-console.log(result)
+const resul = sum(arr, 2)
+console.log(resul)
 
 const mine = {
     gold: 3,
@@ -28,3 +28,11 @@ const mine = {
         }
     }
 }
+const countGold = (level) =>{
+    let total = level.gold
+    if(level.left){
+       w 
+    }
+}
+const result = countGold(mine)
+console.log(result)

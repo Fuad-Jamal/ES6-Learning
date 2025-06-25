@@ -16,14 +16,40 @@ const fizz = (start, end) => {
 // fizz(1, 100)
 
 function palinDrome(str){
-    if(str === '' || str.length === 1 || str.length=== 0 || (str[0]===str[1])) return true;
+    if(str === '' || str.length === 1 || str.length=== 0 || (str[0]===str[1])) return true
+    if(str[0]!== str[str.length - 1]) return false
+
+    return palinDrome(str.substring(1, str.length - 1))
 }
 
 // Test cases for palindrome strings
-console.log(palinDrome("racecar")) // true
-console.log(palinDrome("hello")) // false
-console.log(palinDrome("A man a plan a canal Panama")) // true
-console.log(palinDrome("No lemon, no melon")) // true
-console.log(palinDrome("Was it a car or a cat I saw?")) // true
-console.log(palinDrome("12321")) // true
-console.log(palinDrome("12345")) // false
+// console.log(palinDrome("racecar"))
+// console.log(palinDrome("hello")) 
+// console.log(palinDrome("A man a plan a canal Panama"))
+// console.log(palinDrome("No lemon, no melon"))
+// console.log(palinDrome("Was it a car or a cat I saw?"))
+// console.log(palinDrome("12321"))
+// console.log(palinDrome("12345")) 
+
+const flatten = (arr) => {
+    const result  = []
+    for(const x of arr){
+        if(Array.isArray(x)){
+         const flattened = flatten(x)
+            result.push(...flattened)
+        }else{
+        result.push(x)
+        }
+    }
+    
+    return result
+
+}
+
+console.log(flatten([1, [2, 3], [4, [5, 6]], 7]))        
+console.log(flatten([[1, 2], [3, 4], 5]))          
+console.log(flatten([1, [2, [3, [4, [5]]]]]))                 
+console.log(flatten([[[[[]]]]]))      
+console.log(flatten([1, [], [2, [3, []]], 4]))  
+console.log(flatten([[[1]], [[2]], [[3]]]))  
+console.log(flatten([1, [2, [3, [4, [5, [6, [7]]]]]]])) 

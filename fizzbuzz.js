@@ -46,10 +46,33 @@ const flatten = (arr) => {
 
 }
 
-console.log(flatten([1, [2, 3], [4, [5, 6]], 7]))        
-console.log(flatten([[1, 2], [3, 4], 5]))          
-console.log(flatten([1, [2, [3, [4, [5]]]]]))                 
-console.log(flatten([[[[[]]]]]))      
-console.log(flatten([1, [], [2, [3, []]], 4]))  
-console.log(flatten([[[1]], [[2]], [[3]]]))  
-console.log(flatten([1, [2, [3, [4, [5, [6, [7]]]]]]])) 
+// console.log(flatten([1, [2, 3], [4, [5, 6]], 7]))        
+// console.log(flatten([[1, 2], [3, 4], 5]))          
+// console.log(flatten([1, [2, [3, [4, [5]]]]]))                 
+// console.log(flatten([[[[[]]]]]))      
+// console.log(flatten([1, [], [2, [3, []]], 4]))  
+// console.log(flatten([[[1]], [[2]], [[3]]]))  
+// console.log(flatten([1, [2, [3, [4, [5, [6, [7]]]]]]])) 
+
+
+const flat = (obj)=>{
+    let result = {}
+for(const [key,value] of Object.entries(obj)){
+    if(typeof value === 'object'){
+        const flats = flat(value)
+        result = {...result, ...flats}
+    }else{
+        result[key] = value
+    }
+}
+
+    return result
+}
+
+
+console.log(flat({ a: 1, b: { c: 2, d: 3 } }))
+console.log(flat({ a: { b: { c: { d: 1 } } } }))
+console.log(flat({ a: 1, b: { c: 2 }, d: 3 }))
+console.log(flat({}))
+console.log(flat({ a: { b: 2 }, c: { d: { e: 3 } }, f: 4 }))
+console.log(flat({ a: { b: { c: 1 } }, d: 2, e: { f: 3, g: { h: 4 } } }))

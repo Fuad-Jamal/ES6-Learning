@@ -141,9 +141,13 @@ const document = {
 
 function constructDOM(node){
     if(node.innerText) return node.innerText
+    let html = ''
     for(const child of node.childNodes){
-        html
+        html += `<${child.nodeName}>`
+        html += constructDOM(child);    
+        html += `</${child.nodeName}>`
     }
+    return html
 }
 
 console.log(constructDOM(document))

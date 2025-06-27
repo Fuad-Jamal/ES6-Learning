@@ -1,11 +1,21 @@
-class Animal {
-    constructor(type, name){
+class Student {
+    constructor(major, grades, name){
         this.name = name
-        this.type = type
+        this.grades = grades
+        this.major = major
+    }
+    addGrade(grade){
+        this.grades.push(grade)
+    }
+    average(){
+        let avg = 0
+        for(const grade of this.grades){
+            avg += grade
+        }
+        return avg / this.grades.length
     }
 
 }
-const one = new Animal ('Dog', 'Buddy')
-const two = new Animal ('Cat', 'Whiskers')
-console.log(one)
-console.log(two)
+const mmaaa = new Student('Computer Science', [90, 80, 85], 'Mmaaa')
+mmaaa.addGrade(95)
+console.log(mmaaa.average()) 

@@ -70,9 +70,80 @@ for(const [key,value] of Object.entries(obj)){
 }
 
 
-console.log(flat({ a: 1, b: { c: 2, d: 3 } }))
-console.log(flat({ a: { b: { c: { d: 1 } } } }))
-console.log(flat({ a: 1, b: { c: 2 }, d: 3 }))
-console.log(flat({}))
-console.log(flat({ a: { b: 2 }, c: { d: { e: 3 } }, f: 4 }))
-console.log(flat({ a: { b: { c: 1 } }, d: 2, e: { f: 3, g: { h: 4 } } }))
+// console.log(flat({ a: 1, b: { c: 2, d: 3 } }))
+// console.log(flat({ a: { b: { c: { d: 1 } } } }))
+// console.log(flat({ a: 1, b: { c: 2 }, d: 3 }))
+// console.log(flat({}))
+// console.log(flat({ a: { b: 2 }, c: { d: { e: 3 } }, f: 4 }))
+// console.log(flat({ a: { b: { c: 1 } }, d: 2, e: { f: 3, g: { h: 4 } } }))
+
+
+
+
+const document = {
+  childNodes: [
+    {
+      nodeName: "html",
+      childNodes: [
+        {
+          nodeName: "head",
+          childNodes: [
+            {
+              nodeName: "script",
+              innerText: "console.log('hi');",
+            },
+          ],
+        },
+        {
+          nodeName: "body",
+          childNodes: [
+            {
+              nodeName: "ul",
+              childNodes: [
+                {
+                  nodeName: "li",
+                  childNodes: [
+                    {
+                      nodeName: "b",
+                      innerText: "Home",
+                    },
+                  ],
+                },
+                {
+                  nodeName: "li",
+                  innerText: "Blog",
+                },
+                {
+                  nodeName: "li",
+                  innerText: "About",
+                },
+              ],
+            },
+            {
+              nodeName: "div",
+              childNodes: [
+                {
+                  nodeName: "h1",
+                  innerText: "My Blog",
+                },
+                {
+                  nodeName: "p",
+                  innerText: "Welcome to my blog!",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+function constructDOM(node){
+    if(node.innerText) return node.innerText
+    for(const child of node.childNodes){
+        html
+    }
+}
+
+console.log(constructDOM(document))

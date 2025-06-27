@@ -17,5 +17,7 @@ class Student {
 
 }
 const mmaaa = new Student('Computer Science', [90, 80, 85], 'Mmaaa')
-mmaaa.addGrade(95)
 console.log(mmaaa.average()) 
+mmaaa.addGrade(95)
+console.log(mmaaa.average())
+

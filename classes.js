@@ -1,23 +1,23 @@
-class Student {
-    constructor(major, grades, name){
-        this.name = name
-        this.grades = grades
-        this.major = major
+class Bookstore {
+    constructor(books){
+        this.books = books
     }
-    addGrade(grade){
-        this.grades.push(grade)
+    listBooks(){
+    for(const book of this.books){
+        console.log(`Book: ${book.name}, Author: ${book.author}`)
     }
-    average(){
-        let avg = 0
-        for(const grade of this.grades){
-            avg += grade
-        }
-        return avg / this.grades.length
-    }
-
 }
-const mmaaa = new Student('Computer Science', [90, 80, 85], 'Mmaaa')
-console.log(mmaaa.average()) 
-mmaaa.addGrade(95)
-console.log(mmaaa.average())
-
+}
+class Book{
+    constructor(name, author){
+        this.name = name
+        this.author = author
+    }
+    display(){
+        console.log(`Title: ${this.name}, Author: ${this.author}`)
+    }
+}
+const halidon = new Book('The Halidon', 'Robert Ludlum')
+const hp = new Book('Harry Potter', 'J.K. Rowling')
+const bookstore = new Bookstore([halidon, hp])
+bookstore.listBooks()

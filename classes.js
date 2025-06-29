@@ -29,3 +29,9 @@ flying.fly()
 
 const swimming = Enemy.generateEnemy('Shark')
 swimming.swim()
+
+console.log(Object.getOwnPropertyNames(Enemy))
+console.log(Object.getOwnPropertyNames(facotry))
+console.log(Object.getOwnPropertyNames(facotry.__proto__))
+console.log(Object.getOwnPropertyNames(flying.__proto__))
+console.log(Object.getOwnPropertyNames(swimming.__proto__))

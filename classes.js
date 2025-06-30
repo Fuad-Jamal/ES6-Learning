@@ -33,3 +33,19 @@ class Printer{
 }
 const printer = new Printer('HP', ['Black', 'White'])
 console.log(printer.brand, printer.color)
+
+class Utility{
+    static camelCase(str){
+        const splitted = str.split(' ')
+        let result = '';
+        result += splitted[0].toLowerCase()
+        for(let i =1; i<splitted.length; i++){
+            let word = splitted[i]
+            word = word.toLowerCase()
+            result += word[0].toUpperCase() + word.slice(1)
+        }
+        return result
+    }
+}
+// const util = new Utility()
+console.log(Utility.camelCase('hello world this is a test'))

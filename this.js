@@ -4,7 +4,10 @@ thrro= {
     greet: function() {
     console.log(this)
     console.log(`Hello, I am ${this.name}`)
+},
+arrow: () => {
+    console.log(this)
+    console.log(`Hello, I am ${this.name}`)
 }
-}
-// Object.prototype.
-thrro.greet()
+};
+thro.arrow()

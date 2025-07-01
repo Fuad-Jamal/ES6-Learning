@@ -10,4 +10,6 @@ arrow: () => {
     console.log(`Hello, I am ${this.name}`)
 }
 };
-thrro.greet.apply({ name: 'John' },['juy']); // Hello, I am John
+const x = thrro.greet.bind({ name: 'John' })
+console.log(x)
+x('ksj', 'kjsd')

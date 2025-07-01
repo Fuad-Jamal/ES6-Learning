@@ -10,4 +10,4 @@ arrow: () => {
     console.log(`Hello, I am ${this.name}`)
 }
 };
-thro.arrow()
+thrro.greet.call({ name: 'John' }); // Hello, I am John

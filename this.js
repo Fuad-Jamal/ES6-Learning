@@ -24,3 +24,25 @@ pet.sayHello()
 
 const pet2 = {name: 'Cat', age: 3, type: 'Mammal'}
 pet2.sayHello()
+
+
+const book ={
+    name: 'The Great Adventure',
+    author: 'John Doe',
+    characters: {
+        main: ['Alice', 'Bob', 'Charlie'],
+        list: function() {
+            for (const character of this.main) {
+                console.log(character);
+            }
+        }
+    }
+}
+book.characters.list()
+
+const book2 = {
+    characters: {
+        main: ['Alicque', 'Boby', 'Chaie'],
+    }
+}
+book.characters.list.call(book2.characters)

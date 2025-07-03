@@ -39,10 +39,32 @@ const book ={
     }
 }
 book.characters.list()
+const nnw = book.characters.list.bind({
+    main: ['Alicqu', 'Boby', 'Chaie']
+})
+nnw()
 
-const book2 = {
-    characters: {
-        main: ['Alicque', 'Boby', 'Chaie'],
-    }
+
+function Person(name, age, food){
+    this.name = name
+    this.age = age
+    this.food = food
 }
-book.characters.list.call(book2.characters)
+
+Person.prototype.greet = function() {
+    console.log(`Hello, I am ${this.name}, I am ${this.age} years old and I love ${this.food}.`)
+}
+
+function Person2  (name, age, food, power){
+return { name,
+        age,
+        food,
+        power,
+}
+}
+
+Person2.prototype.__.proto__ = Person.prototype
+const eve = new Person2('Eve', 30, 'Pizza', 'Invisibility')
+const adam = new Person2('Adam', 28, 'Burger', 'Super Strength')
+
+let prot = eve.__proto__

@@ -89,3 +89,10 @@ let sequence = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((x) => {
     return acc + curr
 },0)
 console.log(sequence)
+
+function max(ddd){
+    let x = ddd.map(y=>Math.abs(y))
+    return Math.min(...x)   
+}
+console.log(max([12,34,56,1]));
+console.log(max([-12,-34,0,-56,-1]));

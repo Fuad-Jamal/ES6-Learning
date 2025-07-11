@@ -31,8 +31,13 @@ const mine = {
 const countGold = (level) =>{
     let total = level.gold
     if(level.left){
-       w 
+      total += countGold(level.left) 
     }
+    if(level.right){
+        total += countGold(level.right)
+    }
+    return total
 }
+
 const result = countGold(mine)
 console.log(result)

@@ -7,5 +7,5 @@ const equal = (a= new Date())=>{
 }
 // console.log(equal())
 
-const squash = (str) => str.indexOf('New')===0? str: 'New ' + str
-console.log(squash('Nw York'))
+const squash = (str) => str.length>3? str.slice(0,3)+str.slice(-3):str
+console.log(squash('NwsfwgYork'))

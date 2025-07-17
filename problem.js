@@ -1,7 +1,4 @@
-const equal = (a,b)=>{
-    if(a===100) return true
-        if(b===100) return true
-        if(a+b===100) return true
-
+const equal = (a)=>{
+   return  a.slice(a.lastIndexOf('.'))
 }
-console.log(equal(10,90))
+console.log(equal('hello.world'))

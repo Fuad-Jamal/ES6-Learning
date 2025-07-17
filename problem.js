@@ -7,5 +7,5 @@ const equal = (a= new Date())=>{
 }
 // console.log(equal())
 
-const squash = (str) => str.slice(0, str.length/2)
-console.log(squash('NwsfwgYork'))
+const squash = (a,b) => (100-a)<(100-b) ? a : b;
+console.log(squash(21,63))

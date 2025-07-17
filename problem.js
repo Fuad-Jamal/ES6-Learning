@@ -5,4 +5,7 @@ const equal = (a= new Date())=>{
     const year = a.getFullYear()
     return `${day}-${month}-${year}`
 }
-console.log(equal())
+// console.log(equal())
+
+const squash = (str) => str.indexOf('New')===0? str: 'New ' + str
+console.log(squash('Nw York'))

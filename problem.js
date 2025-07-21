@@ -7,8 +7,7 @@ const equal = (a= new Date())=>{
 }
 // console.log(equal())
 
-const squash = (str,nn) => str.toLowerCase().split('').filter(x=>x===nn?x:'').length
-console.log(squash('NwsfwnsnensngYork','n'))
+const squash = (str) => str.toLowerCase().split('').sort((a,b)=>a>b?1:-1).join``
+console.log(squash('NwsfwnsnensngYork'))
 
-const cou = (arr)=> Math.min(...arr.filter(x=>x%2===0))
-console.log(cou([1,2,3,4,5,6,7,8,9,10]))
+const cou = (arr)=> Math.floor(Math.random()*16).toString(16)

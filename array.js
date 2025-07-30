@@ -106,3 +106,5 @@ let ent = nums.entries()
 for(let val of ent){
     console.log(val)
 }
+let arrz = [7,7,[3,3,[3,[[1,1]],6],8,8],9,9]
+console.log(arrz.flat(Infinity))

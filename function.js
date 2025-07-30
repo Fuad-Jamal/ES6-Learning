@@ -31,5 +31,16 @@ const minus = (para)=>{
     console.log('it has minused')
     para(2,8)
 }
-
 minus(plus)
+
+let arrz = [1,3,4,4,2,4,2,1,3,4,5]
+const sums = (call, x)=>{
+    for(let i =0; i<x.length; i++){
+        let y = x[i]
+        call(y)
+    }
+}
+function diss(ad){
+    console.log(ad)
+}
+sums(diss,arrz)

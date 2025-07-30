@@ -23,5 +23,13 @@ const ssq = (xx) =>{
 return xx**2
 }
 const plus = (x,y)=>{
-
+setTimeout(()=>{
+    console.log(x+y)
+},3000)
 }
+const minus = (para)=>{
+    console.log('it has minused')
+    para(2,8)
+}
+
+minus(plus)

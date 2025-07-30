@@ -100,4 +100,9 @@ console.log(max([-12,-34,0,-56,-1]));
 const str = '1234'
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let num = nums.sort((a,b)=>b-a)
-console.log(Array.from(str))
+console.log(Array.from(str).map(Number))
+
+let ent = nums.entries()
+for(let val of ent){
+    console.log(val)
+}

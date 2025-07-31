@@ -30,3 +30,14 @@ while(num<=100){
     num++
 }
 console.log('tayari')
+
+let i = 3
+while(i>0){
+    console.log(i)
+    i--
+}
+let zza = 15
+do{
+    console.log(zza)
+    zza--
+}while(zza < 15 && zza > 0)

@@ -4,7 +4,8 @@ function happy(yuu){
     saw.add(yuu)
     yuu = (''+yuu).split('').map(x=>x*x).reduce((a,b)=>a+b)
 }
-return yuu ===1? 'happy': 'unhappy'
+// return yuu ===1? 'happy': 'unhappy'
+return saw
 }
 console.log(happy(1))
 console.log(happy(7))

@@ -36,8 +36,15 @@ while(i>0){
     console.log(i)
     i--
 }
-let zza = 15
+let zza = 'wazaa'
 do{
     console.log(zza)
-    zza--
-}while(zza < 15 && zza > 0)
+    
+}while(true){
+    if(zza === 'wazaa'){
+        console.log('wazaa is wazaa')
+    }else {
+        console.log('wazaa is not wazaa')
+    }
+
+}

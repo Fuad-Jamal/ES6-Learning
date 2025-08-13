@@ -108,3 +108,8 @@ for(let val of ent){
 }
 let arrz = [7,7,[3,3,[3,[[1,1]],6],8,8],9,9]
 console.log(arrz.flat(Infinity))
+
+function right(arr){
+    return Object.prototype.toString.call(arrz)==='[object Array]'?true: false
+}
+console.log(right(arrz))

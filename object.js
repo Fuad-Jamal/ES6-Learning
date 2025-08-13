@@ -65,3 +65,8 @@ const iii= {
 }
 iii.log("hello")
 console.log(console)
+
+function right(arr){
+    return Object.prototype.toString.call(arr)==='[object Object]'?true: false
+}
+console.log(right(product))

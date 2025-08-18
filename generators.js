@@ -43,3 +43,4 @@ const nums = random(10, 1, 100)
 for(const num of nums){
    console.log(num)
 }
+// This will not work as expected because the generator is already exhausted after the first loop

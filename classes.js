@@ -49,3 +49,4 @@ class Utility{
 }
 // const util = new Utility()
 console.log(Utility.camelCase('hello world this is a test'))
+console.log(Object.getOwnPropertyNames(Array.prototype)) // []
